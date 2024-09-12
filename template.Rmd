@@ -1,0 +1,73 @@
+---
+title: "Simple document"
+author: 'Wayne'
+date: 1872-06-05
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+
+---
+
+
+```{r echo = FALSE, message=FALSE}
+library(tidyverse)
+```
+
+
+I began by loading the `tidyverse` package.
+
+
+I'm an R Markdown document! 
+
+# Section 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r}
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
+
+
+
+
+# Section 3
+
+
+```{r learning_chunk}
+
+
+df = tibble(
+  rs = rnorm(500, mean = 1)
+  , logi = rs > 0
+  , abso = abs(rs)
+)
+
+ggplot(df, aes(x = abso)) + geom_histogram(binwidth = 0.5)
+```
+
+
+
+Create a buleted list with the mean, median, and sd of the sample.
+
+* `r mean(samp)`
+* `r median(samp)`
+* `r sd(samp)`
+
+```{r}
+
+# apparently R sucked before R Markdown, which I absolutely believe
+
+
+
+
+```
+

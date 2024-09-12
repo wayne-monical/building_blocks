@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+output: html_document
+date: "2024-09-12"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+git config --global user.email "wem2121@cumc.columbia.edu"
+  git config --global user.name "Wayne Monical"
